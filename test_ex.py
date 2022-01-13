@@ -1,8 +1,8 @@
 my_json = {'amount' : 1000000, 'period' : 120, 'percent' : 15, 'type' : 'annuity'} 
-def interest_rate_calculation(json) -> int:
+def interest_rate_calculation(json) -> float:
     '''Calculates cumulative interest paid on a loan for the specific period. 
     Function receives json with amount, period, percent rate and type of credit.
-    Returns integer number of cumulative interest paid on a loan'''
+    Returns float number, which is cumulative interest paid on a loan'''
     amount = json['amount']
     period = json['period']
     percent = json['percent']
@@ -36,3 +36,5 @@ print('My json for annuity loan: ', my_json, '\nCumulative interest paid on a lo
 my_json = {'amount' : 1000000, 'period' : 120, 'percent' : 15, 'type' : 'diff'} 
 diff_rate = interest_rate_calculation(my_json)
 print('My json for diff loan: ', my_json, '\nCumulative interest paid on a loan: ', diff_rate)
+
+
